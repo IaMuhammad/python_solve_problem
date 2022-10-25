@@ -3,8 +3,17 @@ class ListNode:
         self.val = val
         self.next = next
 
+    def length(self):
+        tmp = self
+        l = 0
+        while tmp:
+            l += 1
+            tmp = tmp.next
+        return l
+
     def __repr__(self):
-        return f'{self.val} {self.next}'
+        # return f'{self.val}->{self.next}'
+        return f'{self.val}'
 
 def print_ll(head):
     tmp = head

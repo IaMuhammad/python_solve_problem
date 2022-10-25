@@ -21,9 +21,6 @@ def mergeInBetween(list1: ListNode, a: int, b: int, list2: ListNode) -> ListNode
         i += 1
 
     tmp2_l1.next = list2
-
-
-    print()
     return list1
 
 
