@@ -11,7 +11,7 @@ def deleteDuplicates(head: ListNode):
             while l.val == r.next.val:
                 r = r.next
         except:
-            return head
+            return None
         l.next = r.next
         r = r.next
         b = True
