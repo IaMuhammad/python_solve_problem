@@ -12,7 +12,7 @@ class ListNode:
         return l
 
     def __repr__(self):
-        # return f'{self.val}->{self.next}'
+        # return f'{self.val}'
         return f'{self.val}->{self.next}'
 
 def print_ll(head):
