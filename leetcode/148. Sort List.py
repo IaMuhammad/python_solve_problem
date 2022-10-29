@@ -1,19 +1,15 @@
 from linkedlist import ListNode, list_to_ll
 
 
+def length(head: ListNode):
+    temp = head
+    l = 0
+    while temp:
+        l += 1
+        temp = temp.next
+    return l
+
 def sortList(head: ListNode):
-    tmp = head
-    l = tmp.length()
-    i = 0
-
-    while i < l:
-        j = 0
-        tmp = ListNode(0)
-        tmp.next = head
-        while j < l - i:
-            if
-
-        i += 1
 
     pass
 
