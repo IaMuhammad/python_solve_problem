@@ -94,11 +94,3 @@ def bfs_print(root):
         if node.right:
             que.put(node.right)
 
-root = TreeNode(9)
-l = [5,3, 1,2,8, 10,12, 7,13,14,15,16,17,6]
-for i in l:
-    add(root, i)
-
-print(find_root(root, 18))
-# print(root.depth())
-# print(depth(root))
