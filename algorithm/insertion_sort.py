@@ -4,6 +4,7 @@ def insertion_sort_fe(arr):
         for j in range(i-1,-1,-1):
             if arr[i] >= arr[j]:
                 x = arr.pop(i)
+                
                 arr.insert(j+1, x)
                 break
 
