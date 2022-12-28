@@ -15,12 +15,23 @@ class ListNode:
         # return f'{self.val}'
         return f'{self.val}->{self.next}'
 
+
+# Node of a doubly linked list
+
+class DoublyLinkedList:
+    def __init__(self, next=None, prev=None, data=None):
+        self.next = next
+        self.prev = prev
+        self.data = data
+
+
 def print_ll(head):
     tmp = head
     while tmp:
         print(tmp.val, end=' ')
         tmp = tmp.next
     return
+
 
 def list_to_ll(arr: list):
     head = ListNode(0)
@@ -32,7 +43,8 @@ def list_to_ll(arr: list):
 
     return head.next
 
-head = list_to_ll([1,2,3,4,5])
+
+head = list_to_ll([1, 2, 3, 4, 5])
 tmp = head
 tmp.next = tmp.next.next
 print()
