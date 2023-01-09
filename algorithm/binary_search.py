@@ -1,15 +1,16 @@
-# def binary_search(arr: list, target: int):
-#     l, r = 0, len(arr)
-#     while l < r:
-#         m = (l + r) // 2
-#         if arr[m] == target:
-#             return m
-#         elif arr[m] > target:
-#             r = m - 1
-#         else:
-#             l = m + 1
-#     # return f'{target} bunday son massivda mavjud emas!'
-#     return -1
+def binary_search_while(arr: list, target: int):
+    l, r = 0, len(arr) - 1
+    while l <= r:
+        m = (l + r) // 2
+        if arr[m] == target:
+            return m
+        elif arr[m] > target:
+            r = m - 1
+        else:
+            l = m + 1
+    # return f'{target} bunday son massivda mavjud emas!'
+    return -1
+
 
 def binary_search(arr, target):
     l, r = 0, len(arr)
@@ -24,6 +25,7 @@ def binary_search(arr, target):
         return binary_search(arr[:m], target)
     return binary_search(arr[m:], target)
 
+
 def liner_search(arr, target):
     l = len(arr)
     if arr:
@@ -33,4 +35,5 @@ def liner_search(arr, target):
             return liner_search(arr[1:], target)
     return None
 
-print(liner_search([1, 2, 5, 7, 9, 10, 14, 25], 25))
+
+print(binary_search([-2,0,10,-19,4,6,-8], 22))
