@@ -1,30 +1,13 @@
 class Solution:
-    def bin_pow(self, a, n):
-        if not n:
-            return 1
-        if n == 1:
-            return a
-        s = self.bin_pow(a, n // 2)
-        if n & 1:
-            return a * s * s
-        return s * s
+    def merge(self, intervals: list[list[int]]) -> list[list[int]]:
+        def check(point1, point2):
+            return point1[0] <= point2[0] and point1[1] >= point2[0]
 
-    def arrangeCoins(self, n: int) -> int:
-        if n == 1:
-            return 1
-        l, r = 0, n // 2
-        while l <= r:
-            m = (l + r) // 2
-            k = self.bin_pow(2, m)
-            if k == n:
-                return m
-            if k < n and k * 2 > n:
-                return m+1
-
-            elif k > n:
-                r = m - 1
+        intervals.sort()
+        ans = [intervals[0]]
+        for i in intervals[1:]:
+            if check(ans[-1], i):
+                ans[-1] = [min(i[0], ans[-1][0]), max(i[1], ans[-1][1])]
             else:
-                l = m + 1
-
-a = Solution()
-print(a.arrangeCoins(5))
+                ans.append(i)
+        return ans
