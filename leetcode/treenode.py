@@ -94,3 +94,25 @@ def bfs_print(root):
         if node.right:
             que.put(node.right)
 
+def is_same(root1: TreeNode, root2: TreeNode):
+    if not root1 and not root2:
+        return True
+    if not (root1 and root2) or root1.val != root2.val:
+        return False
+
+    return is_same(root1.left, root2.left) and is_same(root1.right, root2.right)
+
+
+def reverse_bst(root):
+    if not root:
+        return
+
+    reverse_bst(root.left)
+    reverse_bst(root.right)
+    root.left, root.right = root.right, root.left
+
+root = TreeNode(1)
+for i in [2,3,4,5,6,7]:
+    add(root,i)
+print(reverse_bst(root))
+print(reverse_bst(root))
