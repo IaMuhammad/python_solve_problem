@@ -1,5 +1,5 @@
 class ListNode:
-    def __init__(self, val=0, next=None):
+    def __init__(self, val, next=None):
         self.val = val
         self.next = next
 
@@ -12,6 +12,10 @@ class ListNode:
         return l
 
     def __repr__(self):
+        # return f'{self.val}'
+        return f'{self.val}->{self.next}'
+
+    def __str__(self):
         # return f'{self.val}'
         return f'{self.val}->{self.next}'
 

@@ -1,5 +1,9 @@
 from leetcode.linkedlist import ListNode, list_to_ll
 
+class Solution():
+    def mergeNodes(self, head: ListNode):
+
+        pass
 
 def mergeNodes(head: ListNode) -> ListNode:
     res = ListNode(0)
@@ -17,5 +21,7 @@ def mergeNodes(head: ListNode) -> ListNode:
         tmp = tmp.next
     return res.next
 
-ll = list_to_ll([0,3,1,0,4,5,2,0])
-print(mergeNodes(ll))
+
+#
+# ll = list_to_ll([0,3,1,0,4,5,2,0])
+# print(mergeNodes(ll))
