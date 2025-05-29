@@ -1,11 +1,12 @@
 from collections import Counter
+from typing import List
 
 
-def topKFrequent(nums: list[int], k: int) -> list[int]:
-    counter = Counter(nums)
-    l = []
-    for i in counter.items():
-        l.append(list(i))
-    l.sort(key=lambda x:x[1], reverse=True)
-    return [i[0] for i in l][:k]
-print(topKFrequent([1,1,1,2,2,3], 2))
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        counted = Counter(nums)
+        return [x[0] for x in counted.most_common(k)]
+
+
+nums = [1, 3]
+print(Solution().topKFrequent(nums, 2))
