@@ -13,9 +13,11 @@ class Solution:
                 left += 1
             elif nums[left] != 0:
                 left += 1
+
             right += 1
+
         print(nums)
 
 
-Solution().moveZeroes([2, 1])
-Solution().moveZeroes([1, 0, 1])
+Solution().moveZeroes([4, 2, 4, 0, 0, 3, 0, 5, 1, 0])
+Solution().moveZeroes([1, 0, 0, 1])
